@@ -59,6 +59,15 @@ section::after {
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(10px);
+  transition: 0.5s;
+}
+
+.container .card:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+
+  cursor: pointer;
 }
 
 .container .card .content {
@@ -83,9 +92,37 @@ section::after {
   border-radius: 50%;
   overflow: hidden;
   border: 10px solid rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+}
+
+.container .card .content .imgBx-yt {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+}
+
+.container .card:hover .content .imgBx {
+  border: 10px solid rgba(148,102,255, 0.30)
+}
+
+.container .card:hover .content .imgBx-yt {
+  border: 10px solid rgba(255,0,0, 0.60);
 }
 
 .container .card .content .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .card .content .imgBx-yt img {
   position: absolute;
   top: 0;
   left: 0;
